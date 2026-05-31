@@ -1,5 +1,4 @@
 html {
-    /* Включает плавную прокрутку вместо резкого прыжка */
     scroll-behavior: smooth;
 }
 
@@ -15,8 +14,7 @@ body {
 }
 
 
-.header {
- 
+.header { 
     background-color:  #040505be;
     border-bottom: 1px solid #64646488;
     position: fixed;
@@ -25,13 +23,13 @@ body {
     width: 100%;
     z-index: 100;
     position: left; 
-     background-color: rgba(255, 255, 255, 0); /* Полупрозрачный белый фон */
-  backdrop-filter: blur(3px); /* Размывает то, что ОКАЗАЛОСЬ ПОД шапкой */
-  -webkit-backdrop-filter: blur(20px); /* Поддержка для Safari (iOS/macOS) */
+     background-color: rgba(255, 255, 255, 0); 
+  backdrop-filter: blur(3px); 
+  -webkit-backdrop-filter: blur(20px); 
   
 }
 .header .wrap {
-    max-width: 1200px;
+    max-width: 50000px;
     margin: 0 auto;
     padding: 15px 20px;
     display: flex;
@@ -71,6 +69,8 @@ body {
 .panel {
     margin-top: 90px;
 }
+
+    
 
 
 .Popular-games H1 {
@@ -272,10 +272,16 @@ html, body {
     transition: 0.5s;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .nav {
         display: none;
-        min-width: 500px;
+        min-width: 700px;
+          width: 100%;
+    display: flex;
+    overflow-x: auto;       /* Включает горизонтальную прокрутку */
+    white-space: nowrap;    /* Запрещает ссылкам переноситься на новую строку */
+    padding-bottom: 5px;    /* Отступ для удобства скролла */
+    -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
     }
     .hero h1 {
         font-size: 30px;
