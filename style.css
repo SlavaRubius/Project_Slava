@@ -1,0 +1,357 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0f12;
+    color: #c5c6c7;
+    font-family: system-ui, sans-serif;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+.header {
+    background-color:  #040505be;
+    border-bottom: 1px solid #64646488;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+ 
+}
+.header .wrap {
+    max-width: 50000px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.logo span {
+    color: #b3ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
+}
+.nav {
+    display: flex;
+    gap: 25px;
+}
+.link {
+    color: #c5c6c7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.link:hover {
+    color: #b3ff00;
+}
+
+.main {
+    margin-top: 65px;
+}
+
+.hero {
+    background:  #15191e;
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid #64646488;
+}
+
+.hero h1 {
+    font-size: 44px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.hero h1 span {
+    color: #b3ff00;
+    font-size: 44px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00000000 ;
+    color: #ffffffc9;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.7s;
+
+}
+.btn:hover {
+      box-shadow: 0 0 20px #b3ff00;
+    transition: 0.9s;
+    color: #affa00b2;
+}
+
+
+.games {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #0d0f12;
+    overflow: hidden; 
+    position: relative;
+}
+
+.games .line {
+    display: flex;
+    width: max-content;  
+}
+
+.games .track {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    animation: scroll 45s linear infinite;
+}
+ 
+
+.games .item {
+    background-color: #15191e;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 25px 35px;
+    border-radius: 12px;
+    min-width: 220px; 
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+При наведении карточка подсвечивается 
+.games .item:hover {
+    border-color: #b3ff00;
+    transform: translateY(-5px);
+}
+
+.games .item h3 {
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.games .item p {
+    font-size: 13px;
+    color: #c5c6c7;
+}
+
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.auth {
+    background-color: #15191e;
+    padding: 70px 20px;
+    border-top: 1px solid #64646488;
+}
+.auth h1 {
+    font-size: 34px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.auth p {
+margin-top: 10px;
+}
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.form h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.form p {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.form input {
+    width: 100%;
+    padding: 14px;
+    background-color: #0d0f12;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+.form input:focus {
+    outline: none;
+    border-color:  #b3ff00;
+}
+
+.form .login span {
+    display: block; 
+    font-size: 14px;
+    color: #c5c6c7;
+    margin-bottom: 10px; 
+    margin-top: 20px;
+}
+
+
+.form .login .in {
+    display: inline-block;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.form .login .in:hover {
+    border-color:  #b3ff00;
+    color:  #b3ff00;
+    box-shadow: 0 0 12px rgba(196, 248, 136, 0.712);
+}
+.submit {
+    width: 100%;
+    background: transparent;
+    color:  #ffffff;
+    border: 2px solid  rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.submit:hover {
+     border-color:  #b3ff00;
+    color:  #b3ff00;
+    box-shadow: 0 0 14px rgba(196, 248, 136, 0.712);
+}
+
+
+.footer {
+    background-color: #0d0f12;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    padding: 50px 20px;
+}
+.footer .wrap {
+    max-width: 40000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.footer h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.info {
+    flex: 1;
+    min-width: 200px;
+}
+.copy {
+    margin-top: 15px;
+    font-size: 13px;
+}
+.pages {
+    flex: 1.22;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    min-width: 150px;
+}
+.pages a {
+    color: #c5c6c7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.pages a:hover {
+    color:  #b3ff00;
+}
+.social {
+    flex: -1;
+    min-width: 200px;
+}
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.icons a {
+    color:  #b3ff00;
+    text-decoration: none;
+    font-size: 14px;
+}
+.policy {
+    font-size: 13px;
+    color: #c5c6c7;
+    text-decoration: none;
+}
+.policy:hover {
+    color:  #b3ff00;
+}
+
+
+@media (max-width: 800px) {
+    .nav {
+        display: none;
+        min-width: 10px;
+          width: 120%;
+    display: flex;
+    overflow-x: auto;       
+    white-space: nowrap;     
+    padding-bottom: 5px;    
+    -webkit-overflow-scrolling: touch; 
+    }
+    .footer .wrap {
+        flex-direction: column;
+    }
+    .head {
+        min-width: 720px;
+
+    }
+}
