@@ -277,11 +277,7 @@ html, body {
         display: none;
         min-width: 700px;
           width: 100%;
-    display: flex;
-    overflow-x: auto;       /* Включает горизонтальную прокрутку */
-    white-space: nowrap;    /* Запрещает ссылкам переноситься на новую строку */
-    padding-bottom: 5px;    /* Отступ для удобства скролла */
-    -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+   
     }
     .hero h1 {
         font-size: 30px;
