@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="view-transition" content="same-origin">
-    <title>Document</title>
-</head>
-<body>
-
-
-    <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
     <title>ViperPay — Биржа игровых аккаунтов</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Шапка сайта -->
+    <!-- Шапка сайта из каталога -->
     <header class="header">
         <div class="wrap">
             <div class="left">
@@ -31,27 +21,23 @@
                     <a href="help.html" class="link">Поддержка</a>
                 </nav>
             </div>
+        </div>
     </header>
-
- 
-
-
 
     <main class="main">
         
-        
+        <!-- Главный баннер -->
         <section class="hero">
           <div class="box">
-             <h1>Покупай и продавай <br> игровые ценности  с VIPER<span>PAY</span></h1>
+             <h1>Покупай и продавай <br> игровые ценности с VIPER<span>PAY</span></h1>
              <p>Безопасная биржа аккаунтов, игровой валюты, ключей и услуг с моментальной защитой сделок.</p>
-             <a href="catalog.html" class="btn">В каталог</a>
+             <a href="catalog.html" class="btn-hero">В каталог</a>
           </div>
         </section>
-
        
+        <!-- Бегущая строка с играми -->
         <section class="games">
             <div class="line">
-          
                 <div class="track">
                     <div class="item"><h3>Dota 2</h3><p>Золото, буст</p></div>
                     <div class="item"><h3>CS 2</h3><p>Скины, кейсы</p></div>
@@ -62,7 +48,7 @@
                     <div class="item"><h3>Fortnite</h3><p>В-баксы, коды</p></div>
                     <div class="item"><h3>PUBG</h3><p>UC, аккаунты</p></div>
                 </div>
-           
+                <!-- Дубликат трека для непрерывной анимации -->
                 <div class="track">
                     <div class="item"><h3>Dota 2</h3><p>Золото, буст</p></div>
                     <div class="item"><h3>CS 2</h3><p>Скины, кейсы</p></div>
@@ -76,31 +62,29 @@
             </div>
         </section>
 
-
-     
+        <!-- Секция Авторизации/Регистрации -->
         <section class="auth">
-            <div class="form">
+            <div class="form-container">
                 <h1>Создайте аккаунт</h1>
-                <p>Начните торговать на любимых играх прямо сейчас</p>
+                <p class="subtitle">Начните торговать в любимых играх прямо сейчас</p>
                 
-                <form action="#" method="POST">
+                <form action="#" method="POST" class="auth-form">
                     <input type="email" placeholder="Электронная почта" required>
                     <input type="password" placeholder="Пароль" required>
                     <input type="password" placeholder="Повторите пароль" required>
                     <button type="submit" class="submit">Зарегистрироваться</button>
-                    <div class="login">
                 </form>
-            </div>
 
-            <div class="login">
-                <span>Уже есть аккаунт?</span>
-                <button type="button" class="in">Войти</button>
+                <div class="login-prompt">
+                    <span>Уже есть аккаунт?</span>
+                    <button type="button" class="btn-login-toggle">Войти</button>
+                </div>
             </div>
         </section>
 
     </main>
 
-
+    <!-- Подвал сайта -->
     <footer class="footer">
         <div class="wrap">
             <div class="info">
@@ -127,13 +111,10 @@
             </div>
         </div>
     </footer>
-
     
 </body>
 </html>
 
-</body>
-</html>
 
 
 
