@@ -6,170 +6,118 @@
     <title>catalog</title>
     <link rel="stylesheet" href="catalog.css">
 </head>
-<body>
-    
-    <header class="header">
-        <div class="wrap">
-            <div class="left">
-                <a href="index.html" class="logo">VIPER<span>PAY</span></a>
-                <nav class="nav">
-                    <a href="#" class="link">Игры</a>
-                    <a href="feedback.html" class="link">Отзывы</a>
-                    <a href="#about" class="link" style="white-space: nowrap;">О нас</a>
-                    <a href="help.html" class="link">Поддержка</a>
-                </nav>
-            </div>
-    </header>
-
-
-  
-    <div class="panel">    
-      <input type="text" id="search" placeholder="найти игру..."> 
-                <button class="btn" id="active" style="margin-left: 10px;">Все</button>
-                <button class="btn">MMO</button>  
-                <button class="btn">Шутеры</button>
-                <button class="btn">Экшен</button>
-                <button class="btn">симуляторы</button> 
-                <button class="btn" style="margin-top: 12px;">RP Проекты</button>
-    </div>
-
-    <div class="Popular-games">
-        <H1>Смотрят чаще всего</H1>
-    </div>
-    <section class="catalog">     
-            <div class="card">
-             <img class="img" src="https://upload.wikimedia.org/wikipedia/ru/8/85/World_of_Warcraft_Classic_Logo.png" alt="WoW">
-                <h3>World of Warcraft</h3>
-                  <br>
-                <a href="#"class="btn">Открыть</a>
-            </div>
-
-
-            <div class="card">
-                <img  class="img" src="data:image/jpeg;base64,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" alt="CS2">
-                <h3>Counter-Strike 2</h3>
-                 <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>
-
-            
-            <div class="card">
-                <img class="img" src="data:image/png;base64,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" alt="L2">
-                <h3>Lineage 2</h3>
-                 <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>
-
-
-            <div class="card">
-                <img class="img" src="https://fonzon.club/uploads/posts/2022-01/1643559161_3-fonzon-club-p-dota-2-logo-png-prozrachnii-fon-10.jpg" alt="Dota2">
-                <h3>Dota 2</h3>
-                 <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>
-
-            <div class="card">
-                <img class="img" src="data:image/jpeg;base64,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" alt="Arizona">
-                <h3>Arizona RP</h3>
-                 <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>
-
-            <div class="card">
-                <img class="img" src="https://png.klev.club/uploads/posts/2024-06/png-klev-club-rgan-p-valorant-znachok-png-5.png" alt="Valorant">
-                <h3>Valorant</h3> <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>  
-
-            <div class="card">
-                <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMB0Ao48cVTrqY8vsLIRuGpbo5q9lu9hfQsw&s" alt="Roblox">
-                <h3>Roblox</h3> <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>  
-
-            <div class="card">
-                <img class="img" src="https://i.ytimg.com/vi/LfXnU1hqDgE/maxresdefault.jpg" alt="Province">
-                <h3>Province RP</h3> <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>  
-
-            <div class="card">
-                <img class="img" src="https://avatars.mds.yandex.net/i?id=728f908ea3b6085f524be72171b71896e7c4beca-13312065-images-thumbs&n=13" alt="Fortnite">
-                <h3>Fortnite</h3> <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>  
-
-            <div class="card">
-                <img class="img" src="https://preview.redd.it/variations-to-the-minecraft-logo-v0-0dzqovtefeqd1.png?width=1080&crop=smart&auto=webp&s=e5fe1b8b9ab1a689dd6059f087caca969401592f" alt="Minecraft">
-                <h3>Minecraft</h3> <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>  
-            
-            <div class="card">
-                <img class="img" src="https://i.playerok.com/GyNqXXlEl8W5LKMbXSXxcNw9E55RInogqVWW5LWoE-E/rs:fill:0:2000:0/g:no/quality:99/czM6Ly9wbGF5ZXJvay8vaW1hZ2VzLzFmMTNlNTljLTNlOTYtNjNhMC1lZTJhLTUxYzk3M2U0NjAyZC53ZWJw.png" alt="Arizona">
-                <h3>Brawl Stars</h3>
-                 <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>
-
-            <div class="card">
-                <img class="img" src="https://i.playerok.com/Ej0QDYqDrho1A6PcsnWP2-ifBscHA1a0pT4KQ4JDSMA/rs:fill:0:2000:0/g:no/quality:99/czM6Ly9wbGF5ZXJvay8vaW1hZ2VzLzFmMTM5OTQxLTAzNzItNmFmMC03Mzg5LTM2MTVkOTIyOTE4My53ZWJw.png" alt="Arizona">
-                <h3>Free Fire</h3>
-                 <br>
-                <a href="#" class="btn">Открыть</a>
-            </div>
-    </section>
-        <div style="margin-top: 25px;"   class="Popular-games">
-            <H1></H1>
+<header class="header">
+    <div class="wrap">
+        <div class="left">
+            <a href="index.html" class="logo">VIPER<span>PAY</span></a>
+            <nav class="nav">
+                <a href="#" class="link">Игры</a>
+                <a href="feedback.html" class="link">Отзывы</a>
+                <a href="#about" class="link">О нас</a>
+                <a href="help.html" class="link">Поддержка</a>
+            </nav>
         </div>
+    </div>
+</header>
 
-    <section class="p2p-marketplace">
+<div class="panel">    
+    <input type="text" id="search" placeholder="Найти игру..."> 
+    <div class="filter-buttons">
+        <button class="btn active" id="all-btn">Все</button>
+        <button class="btn">MMO</button>  
+        <button class="btn">Шутеры</button>
+        <button class="btn">Экшен</button>
+        <button class="btn">Симуляторы</button> 
+        <button class="btn">RP Проекты</button>
+    </div>
+</div>
 
-            <div class="card-player">
-                <img class="img-player" src="">
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    </section>
-   
-    <footer class="footer">
-        <div class="wrap">
-            <div class="info">
-                <a href="index.html" class="logo">VIPER<span>PAY</span></a>
-                <p class="copy">© 2026 ViperPay.</p>
-            </div>
+<main class="main-content">
+    <section class="popular-games">
+        <div class="container">
+            <h1>Смотрят чаще всего</h1>
             
-            <div class="pages">
-                <a href="index.html">Главная</a>
-                <a href="catalog.html">Каталог</a>
-                <a href="feedback.html">Отзывы</a>
-                <a href="akk.html">Кабинет</a>
-                <a href="help.html">Помощь</a>
-            </div>
-
-            <div class="social">
-                <h4>Мы в соцсетях</h4>
-                <div class="icons">
-                    <a href="#">VK</a>
-                    <a href="#">Telegram</a>
-                    <a href="#">Discord</a>
+            <div class="catalog">     
+                <div class="card">
+                    <img class="img" src="https://wikimedia.org" alt="WoW">
+                    <h3>World of Warcraft</h3>
+                    <a href="#" class="btn-card">Открыть</a>
                 </div>
-                <a href="#" class="policy">Политика безопасности</a>
+
+                <div class="card">
+                    <img class="img" src="https://wikimedia.org" alt="Dota 2">
+                    <h3>Dota 2</h3>
+                    <a href="#" class="btn-card">Открыть</a>
+                </div>
+
+                <div class="card">
+                    <img class="img" src="https://wikimedia.org" alt="CS 2">
+                    <h3>Counter-Strike 2</h3>
+                    <a href="#" class="btn-card">Открыть</a>
+                </div>
+
+                <div class="card">
+                    <img class="img" src="https://wikimedia.org" alt="GTA V">
+                    <h3>GTA V / Arizona RP</h3>
+                    <a href="#" class="btn-card">Открыть</a>
+                </div>
             </div>
         </div>
-    </footer>     
+    </section>
 
-</body>
-</html>
+    <section class="hot-offers">
+        <div class="container">
+            <h2>Горячие предложения</h2>
+            
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="img-wrapper">
+                        <img class="offer-img" src="https://wikimedia.org" alt="WoW Gold">
+                    </div>
+                    <div class="offer-info">
+                        <span class="offer-game">World of Warcraft</span>
+                        <span class="offer-type">Монеты (Золото)</span>
+                        <span class="offer-price">1.50 ₽ / шт.</span>
+                    </div>
+                    <a href="#" class="btn-card">Купить</a>
+                </div>
+
+                <div class="offer-card">
+                    <div class="img-wrapper">
+                        <img class="offer-img" src="https://wikimedia.org" alt="Dota 2 Items">
+                    </div>
+                    <div class="offer-info">
+                        <span class="offer-game">Dota 2</span>
+                        <span class="offer-type">Предметы (Arcana)</span>
+                        <span class="offer-price">2 100 ₽</span>
+                    </div>
+                    <a href="#" class="btn-card">Купить</a>
+                </div>
+
+                <div class="offer-card">
+                    <div class="img-wrapper">
+                        <img class="offer-img" src="https://wikimedia.org" alt="GTA Virt">
+                    </div>
+                    <div class="offer-info">
+                        <span class="offer-game">Arizona RP</span>
+                        <span class="offer-type">Игровая валюта</span>
+                        <span class="offer-price">45 ₽ / млн</span>
+                    </div>
+                    <a href="#" class="btn-card">Купить</a>
+                </div>
+
+                <div class="offer-card">
+                    <div class="img-wrapper">
+                        <img class="offer-img" src="https://wikimedia.org" alt="Valorant Points">
+                    </div>
+                    <div class="offer-info">
+                        <span class="offer-game">Valorant</span>
+                        <span class="offer-type">Донат (VP)</span>
+                        <span class="offer-price">850 ₽</span>
+                    </div>
+                    <a href="#" class="btn-card">Купить</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
