@@ -214,6 +214,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* Фикс стилей контента предложений (теперь они встанут в блоки) */
 .offer-info {
     display: flex;
     flex-direction: column;
@@ -243,29 +244,30 @@ body {
     text-shadow: 0 0 20px rgba(179, 255, 0, 0.2);
 }
 
-/* Кнопки для ПК версии (базовые стили) */
+/* Кнопки для ПК версии — жестко ограничили ширину, чтобы не расплывались */
 .btn-card {
     display: block;
-    width: 100%;
-    max-width: 160px; 
-    margin: 0 auto;
-    background: transparent;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 700;
-    border: 1px solid #b3ff00;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100% !important;
+    max-width: 160px !important; 
+    margin: 20px auto 0 auto !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 12px !important;
+    border-radius: 12px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    border: 1px solid #b3ff00 !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .btn-card:hover {
-    background: #b3ff00;
-    color: #090a0f;
-    box-shadow: 0 0 25px rgba(179, 255, 0, 0.4);
-    font-weight: 800;
+    background: #b3ff00 !important;
+    color: #090a0f !important;
+    box-shadow: 0 0 25px rgba(179, 255, 0, 0.4) !important;
+    font-weight: 800 !important;
 }
 
 /* Адаптивность для планшетов */
@@ -310,7 +312,7 @@ body {
     }
 }
 
-/* Две колонки на мобилках — чистые фиксы */
+/* Две колонки на мобилках */
 @media (max-width: 580px) {
     .main-content, .panel {
         padding: 0 16px;
@@ -322,7 +324,7 @@ body {
     }
     
     #search {
-        max-width: 90%;
+        max-width: 100%;
         padding: 12px 16px;
     }
     
@@ -359,14 +361,14 @@ body {
         font-size: 16px;
     }
     
-  
+    /* Кнопка на мобилках встает идеально внутрь колонки */
     .btn-card {
-        width: 100%;
+        width: 100% !important;
         max-width: 100% !important;
-        box-sizing: border-box;
-        padding: 10px 5px;
-        font-size: 13px;
-        border-radius: 8px;
-        margin: 0 auto;
+        box-sizing: border-box !important;
+        padding: 10px 5px !important;
+        font-size: 13px !important;
+        border-radius: 8px !important;
+        margin: 0 auto !important;
     }
 }
