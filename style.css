@@ -1,123 +1,150 @@
-
+/* Общие настройки */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #0d0f12;
-    color: #c5c6c7;
-    font-family: system-ui, sans-serif;
-    overflow-x: hidden;
-}
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    background-color: #090a0f;
+    color: #e2e8f0;
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Шапка сайта (Точь-в-точь как в каталоге) */
 .header {
-    background-color:  #040505be;
-    border-bottom: 1px solid #64646488;
+    background-color: rgba(9, 10, 15, 0.85); 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
- 
 }
+
 .header .wrap {
-    max-width: 50000px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 15px 30px; /* Слегка уменьшили отступы, чтобы было компактнее */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header .left {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 40px; /* Уменьшили зазор между лого и меню на средних экранах */
+    width: 100%;
+    justify-content: space-between; /* Расталкивает логотип и ссылки по краям */
 }
+
 .logo {
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 26px;
+    font-weight: 900;
     color: #ffffff;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    flex-shrink: 0; /* Запрещаем логотипу сжиматься */
 }
+
 .logo span {
     color: #b3ff00;
-    text-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
+    text-shadow: 0 0 30px rgba(179, 255, 0, 0.3);
 }
+
+/* Меню навигации */
 .nav {
     display: flex;
-    gap: 25px;
+    gap: 25px; /* Чуть компактнее зазоры между ссылками */
+    flex-wrap: nowrap; /* Запрещаем перенос ссылок на вторую строку на ПК! */
 }
+
 .link {
-    color: #c5c6c7;
+    color: #94a3b8;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Запрещаем тексту внутри ссылки биться на 2 строки */
 }
+
 .link:hover {
     color: #b3ff00;
 }
 
+/* Контентная зона */
 .main {
-    margin-top: 65px;
+    margin-top: 71px;
 }
 
+/* Секция Hero */
 .hero {
-    background:  #15191e;
-    padding: 100px 20px;
+    background: linear-gradient(180deg, #131722 0%, #090a0f 100%);
+    padding: 120px 40px;
     text-align: center;
-    border-bottom: 1px solid #64646488;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .hero h1 {
-    font-size: 44px;
+    font-size: 48px;
     color: #ffffff;
-    margin-bottom: 20px;
-    font-weight: 800;
-    text-decoration: none;
-    letter-spacing: 1px;
+    margin-bottom: 24px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
 }
 
 .hero h1 span {
     color: #b3ff00;
-    font-size: 44px;
-    font-weight: 800;
-    text-decoration: none;
-    letter-spacing: 1px;
+    text-shadow: 0 0 30px rgba(179, 255, 0, 0.2);
 }
 
 .hero p {
-    max-width: 600px;
-    margin: 0 auto 35px;
-    font-size: 17px;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    color: #94a3b8;
+    line-height: 1.6;
 }
 
-.btn {
+/* Кнопка "В каталог" со сверхплавным расширением 0.7s */
+.btn-hero {
     display: inline-block;
-    background-color: #00000000 ;
-    color: #ffffffc9;
-    padding: 14px 32px;
-    border-radius: 6px;
-    font-weight: bold;
+    background: transparent;
+    color: #ffffff;
     text-decoration: none;
-    transition: 0.7s;
-
+    padding: 14px 36px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #b3ff00;
+    text-align: center;
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.btn:hover {
-      box-shadow: 0 0 20px #b3ff00;
-    transition: 0.9s;
-    color: #affa00b2;
+
+.btn-hero:hover {
+    background: transparent; 
+    color: #ffffff; 
+    border-color: #b3ff00;
+    padding: 14px 50px; 
+    transform: scale(1.05); 
+    animation: pulse-neon 2s infinite alternate ease-in-out; 
 }
 
-
+/* Бегущая строка (Идеальная бесшовная анимация) */
 .games {
     width: 100%;
-    padding: 60px 0;
-    background-color: #0d0f12;
+    padding: 40px 0;
+    background-color: #090a0f;
     overflow: hidden; 
     position: relative;
 }
@@ -131,227 +158,308 @@ html {
     display: flex;
     gap: 20px;
     padding-right: 20px;
-    animation: scroll 45s linear infinite;
+    animation: scroll 30s linear infinite;
 }
- 
 
 .games .item {
-    background-color: #15191e;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    padding: 25px 35px;
-    border-radius: 12px;
-    min-width: 220px; 
+    background: linear-gradient(145deg, #131722, #0f121a);
+    border: 1px solid #1e2538;
+    padding: 20px 30px;
+    border-radius: 16px;
+    min-width: 240px; 
     text-align: center;
-    transition: transform 0.3s, border-color 0.3s;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-При наведении карточка подсвечивается 
 .games .item:hover {
     border-color: #b3ff00;
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(179, 255, 0, 0.05);
 }
 
 .games .item h3 {
     color: #ffffff;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-size: 18px;
+    font-weight: 700;
 }
 
 .games .item p {
     font-size: 13px;
-    color: #c5c6c7;
+    color: #94a3b8;
 }
-
-
-
 
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%); 
     }
 }
 
-
-
+/* Форма регистрация и авторизации */
 .auth {
-    background-color: #15191e;
-    padding: 70px 20px;
-    border-top: 1px solid #64646488;
+    background: linear-gradient(180deg, #090a0f 0%, #131722 100%);
+    padding: 90px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
-.auth h1 {
-    font-size: 34px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-weight: 800;
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-.auth p {
-margin-top: 10px;
-}
-.form {
-    max-width: 400px;
+
+.form-container {
+    max-width: 440px;
     margin: 0 auto;
     text-align: center;
+    background: #0f121a;
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid #1e2538;
 }
-.form h2 {
+
+.auth h1 {
+    font-size: 30px;
     color: #ffffff;
+    font-weight: 800;
     margin-bottom: 10px;
 }
-.form p {
-    margin-bottom: 30px;
-    font-size: 14px;
-}
-.form input {
-    width: 100%;
-    padding: 14px;
-    background-color: #0d0f12;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 6px;
-    color: #ffffff;
-    margin-bottom: 15px;
+
+.auth .subtitle {
+    margin-bottom: 35px;
     font-size: 15px;
-    transition: border-color 0.3s;
-}
-.form input:focus {
-    outline: none;
-    border-color:  #b3ff00;
+    color: #94a3b8;
 }
 
-.form .login span {
-    display: block; 
-    font-size: 14px;
-    color: #c5c6c7;
-    margin-bottom: 10px; 
-    margin-top: 20px;
-}
-
-
-.form .login .in {
-    display: inline-block;
-    background: transparent;
+.auth-form input {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: #131722;
+    border: 1px solid #22293a;
+    border-radius: 12px;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px 25px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
+    margin-bottom: 16px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
 }
 
-
-.form .login .in:hover {
-    border-color:  #b3ff00;
-    color:  #b3ff00;
-    box-shadow: 0 0 12px rgba(196, 248, 136, 0.712);
+.auth-form input:focus {
+    border-color: #b3ff00;
+    box-shadow: 0 0 20px rgba(179, 255, 0, 0.1);
 }
+
+/* Кнопка отправки формы */
 .submit {
     width: 100%;
     background: transparent;
-    color:  #ffffff;
-    border: 2px solid  rgba(255, 255, 255, 0.2);
-    padding: 14px;
-    border-radius: 6px;
+    color: #ffffff;
+    border: 1px solid #b3ff00;
+    padding: 16px;
+    border-radius: 12px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s;
-    margin-bottom: 20px;
-    font-weight: 800;
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    margin-top: 10px;
 }
 
 .submit:hover {
-     border-color:  #b3ff00;
-    color:  #b3ff00;
-    box-shadow: 0 0 14px rgba(196, 248, 136, 0.712);
+    background: transparent;
+    color: #ffffff;
+    border-color: #b3ff00;
+    transform: scale(1.03);
+    animation: pulse-neon 2s infinite alternate ease-in-out;
 }
 
+/* Переключалка на логин */
+.login-prompt {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
+}
 
+.login-prompt span {
+    display: block;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.btn-login-toggle {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-login-toggle:hover {
+    border-color: #b3ff00;
+    color: #ffffff;
+    transform: scale(1.05);
+    animation: pulse-neon 2s infinite alternate ease-in-out;
+}
+
+/* Подвал сайта */
 .footer {
-    background-color: #0d0f12;
-    border-top: 1px solid rgba(255,255,255,0.03);
-    padding: 50px 20px;
+    background-color: #090a0f;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px 40px;
 }
+
 .footer .wrap {
-    max-width: 40000px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
 }
+
 .footer h4 {
     color: #ffffff;
     margin-bottom: 15px;
+    font-weight: 700;
 }
+
 .info {
     flex: 1;
-    min-width: 200px;
+    min-width: 250px;
 }
+
 .copy {
     margin-top: 15px;
-    font-size: 13px;
-}
-.pages {
-    flex: 1.22;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    min-width: 150px;
-}
-.pages a {
-    color: #c5c6c7;
-    text-decoration: none;
     font-size: 14px;
+    color: #64748b;
+}
+
+.pages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.pages a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
     transition: color 0.3s;
 }
+
 .pages a:hover {
-    color:  #b3ff00;
+    color: #b3ff00;
 }
+
 .social {
-    flex: -1;
-    min-width: 200px;
+    flex: 1;
+    min-width: 250px;
 }
+
 .icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     margin-bottom: 20px;
 }
+
 .icons a {
-    color:  #b3ff00;
+    color: #b3ff00;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
 }
+
 .policy {
-    font-size: 13px;
-    color: #c5c6c7;
+    font-size: 14px;
+    color: #64748b;
     text-decoration: none;
+    transition: color 0.3s;
 }
+
 .policy:hover {
-    color:  #b3ff00;
+    color: #b3ff00;
 }
 
+/* Анимация пульсации тени */
+@keyframes pulse-neon {
+    0% {
+        box-shadow: 0 0 10px rgba(179, 255, 0, 0.3), inset 0 0 5px rgba(179, 255, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(179, 255, 0, 0.8), inset 0 0 10px rgba(179, 255, 0, 0.4);
+    }
+}
 
-@media (max-width: 800px) {
+/* --- МОБИЛЬНАЯ АДАПТАЦИЯ --- */
+@media (max-width: 768px) {
+    .header .wrap {
+        padding: 15px 20px;
+    }
+    
+    .header .left {
+        flex-direction: row; /* Не ломаем флекс на мобках */
+        justify-content: flex-start;
+    }
+
+    /* Мобильное меню выносится в нижний фиксированный слой */
     .nav {
-        display: none;
-        min-width: 10px;
-          width: 120%;
-    display: flex;
-    overflow-x: auto;       
-    white-space: nowrap;     
-    padding-bottom: 5px;    
-    -webkit-overflow-scrolling: touch; 
+        position: fixed;   
+        top: 61px; /* Сдвинули чуть выше, так как уменьшили паддинг хедера */
+        left: 0;
+        width: 100%;       
+        display: flex;
+        gap: 20px;         
+        padding: 15px 24px; 
+        background-color: #090a0f; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);       
+        overflow-x: auto; 
     }
-    .footer .wrap {
-        flex-direction: column;
-    }
-    .head {
-        min-width: 720px;
 
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main {
+        margin-top: 120px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .auth {
+        padding: 60px 16px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .auth h1 {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footer .wrap {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
     }
 }
+
