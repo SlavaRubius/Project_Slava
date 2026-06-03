@@ -4,13 +4,11 @@ html {
 
 body {
 
-    font-family: sans-serif;
+ font-family: system-ui, sans-serif;
     padding: 20px;
-    min-width: 450px;
     background-color: #0d0f12;
     color: #c5c6c7;
-    font-family: system-ui, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Прячем горизонтальный скролл, чтобы страница не виляла вбок */
 }
 
 
@@ -24,7 +22,7 @@ body {
     z-index: 100;
     position: left; 
      background-color: rgba(255, 255, 255, 0); 
-  backdrop-filter: blur(3px); 
+  backdrop-filter: blur(1px); 
   -webkit-backdrop-filter: blur(20px); 
   
 }
@@ -68,6 +66,9 @@ body {
 
 .panel {
     margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;      
 }
 
 .Popular-games H1 {
@@ -79,15 +80,15 @@ body {
 }
 
 #search, .btn {
-    padding: 15px;
+     padding: 15px;
     background: #1f232b;
     color: #fff;
     border: 1px solid #333a47;
     border-radius: 5px;
     cursor: pointer;
     outline: none;
-    margin-left: 5px;
     transition: 0.7s;
+    margin: 0; /* Обнуляем старый margin-left */
 }
 
 
@@ -257,10 +258,11 @@ mix-blend-mode: lighten;
     color:  #b3ff00;
 }
 
-html, body {
-  margin: 10;
-  padding: 0;
-  width: 100%;
+ html, body {
+  margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
 }
 
 .btn:hover{
@@ -268,17 +270,78 @@ html, body {
     transition: 0.5s;
 }
 
+
 @media (max-width: 768px) {
-    .nav {
-    display: none;
-    min-width: 700px;
-    width: 100%;
-    display: flex;
+    /* Шапка разгружается, логотип остается один слева */
+    .header .wrap {
+        justify-content: flex-start;
+        padding: 15px;
     }
-    .hero h1 {
-        font-size: 30px;
+    
+    .header .left {
+        width: 100%;
+    }
+    /* ... твой предыдущий код для .header .wrap остается без изменений ... */
+
+    /* Меню жестко фиксируется на экране и никуда не уезжает */
+    .nav {
+        position: fixed;   /* МЕНЯЕМ НА FIXED: теперь оно намертво прибито к экрану */
+        top: 71px;         /* Встает ровно под твоим фиксированным хедером */
+        left: 0;
+        width: 100%;       
+        display: flex;
+        justify-content: flex-start;
+        z-index: 99;       /* Слой чуть ниже хедера (100), но выше карточек каталога */
+        
+        /* Плотно сближаем ссылки */
+        gap: 12px;         
+        padding: 12px 20px; 
+        
+        /* Эффект матового стекла как у хедера */
+        background-color: rgba(0, 0, 0, 0); 
+        backdrop-filter: blur(3px);               
+        -webkit-backdrop-filter: blur(20px);      
+        border-bottom: 0.6px solid #64646444;       
+        
+        overflow-x: auto; 
+    }
+
+    /* ... остальной код для .link, .panel и .footer остается без изменений ... */
+
+
+    /* Прячем полосу прокрутки у ссылок */
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Оставляем ссылки компактного размера, как ты просил */
+    .link {
+        font-size: 11px;       
+        font-weight: 700;       
+        text-transform: uppercase; 
+        letter-spacing: 0px;    
+        flex-shrink: 0; 
+        color: #ffffff;
+    }
+
+    /* Панель поиска встает ровно под спустившимся меню */
+    .panel {
+        margin-top: 135px; 
+        padding: 0 5px;
+    }
+
+    /* Мобильный футер */
+    .footer {
+        min-width: 100% !important;
+        margin-top: 40px;
+        padding: 30px 20px;
     }
     .footer .wrap {
         flex-direction: column;
+        gap: 25px;
+    }
+    .header{
+        border-bottom:none ;
     }
 }
+
