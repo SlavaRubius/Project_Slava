@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр поддержки | GameServices</title>
+    <link rel="stylesheet" href="help.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="wrap">
+            <a href="index.html" class="logo">VIPER<span>PAY</span></a>
+            <div class="header-right">
+                <a href="chats.html" class="header-chats">Чаты</a>
+                <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="akk.html" class="header-avatar-link">
+                    <div class="avatar-holder">
+                        <div class="user-avatar-circle"></div>
+                        <span class="avatar-label">Профиль</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav" id="navMenu">
+                <div class="menu-links">
+                    <a href="akk.html" class="link">Аккаунт</a>
+                    <a href="help.html" class="link">Помощь</a>
+                    <a href="feedback.html" class="link">Отзывы</a>
+                    <a href="#about" class="link">О нас</a>
+                </div>
+            </nav>
+            <div class="menu-overlay" id="menuOverlay"></div>
+        </div>
+    </header>
+
+    <a href="index.html" class="round-exit-btn" title="Вернуться на главную">&larr;</a>
+
+    <div class="chat-container">
+        <!-- Шапка чата -->
+        <div class="chat-header">
+            <div class="bot-avatar">
+                <span class="avatar-text">AI</span>
+            </div>
+            <div class="bot-info">
+                <h3>CyberSupport Bot</h3>
+                <div class="bot-status">Онлайн</div>
+            </div>
+        </div>
+
+        <!-- Окно сообщений -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Приветствую. Я автоматический ассистент гейм-сервиса. Какой у тебя вопрос? Выбери категорию ниже или напиши свой текст.
+            </div>
+        </div>
+
+        <!-- Кнопки-подсказки -->
+        <div class="quick-replies" id="quickReplies">
+            <button class="suggest-btn" onclick="sendQuick('Не пришел донат / голда')">Донат не пришел</button>
+            <button class="suggest-btn" onclick="sendQuick('Как заказать буст?')">Заказать буст</button>
+            <button class="suggest-btn" onclick="sendQuick('Хочу стать продавцом')">Стать продавцом</button>
+        </div>
+
+        <!-- Форма ввода -->
+        <div class="chat-input-area">
+            <input type="text" id="userInput" class="chat-input" placeholder="Введите сообщение..." onkeypress="handleKeyPress(event)">
+            <button class="send-btn" onclick="sendMessage()">Отправить</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="info">
+                <a href="index.html" class="logo">VIPER<span>PAY</span></a>
+                <p class="copy">© 2026 ViperPay.</p>
+            </div>
+            <div class="pages">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="feedback.html">Отзывы</a>
+                <a href="akk.html">Кабинет</a>
+                <a href="help.html">Помощь</a>
+            </div>
+            <div class="social">
+                <h4>Мы в соцсетях</h4>
+                <div class="icons">
+                    <a href="#">VK</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">Discord</a>
+                </div>
+                <a href="#" class="policy">Политика безопасности</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="help.js"></script>
+</body>
+</html>
