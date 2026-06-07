@@ -45,3 +45,4 @@ function previewImage(event) {
         preview.src = URL.createObjectURL(input.files[0]);
     }
 }
+
