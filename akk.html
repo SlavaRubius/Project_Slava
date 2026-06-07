@@ -8,19 +8,43 @@
 </head>
 <body>
 
-    <header class="header">
+     <header class="header">
         <div class="wrap">
-            <div class="left">
-                <a href="index.html" class="logo">VIPER<span>PAY</span></a>
-                <nav class="nav">
-                    <a href="catalog.html" class="link">Игры</a>
+            
+            <a href="index.html" class="logo">VIPER<span>PAY</span></a>
+            
+       
+            <div class="header-right">
+                        
+                <a href="chats.html" class="header-chats">Чаты</a>
+            
+                <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>         
+
+                <a href="akk.html" class="header-avatar-link">
+                    <div class="avatar-holder">
+                        <div class="user-avatar-circle"></div>
+                        <span class="avatar-label">Профиль</span>
+                    </div>
+                </a>
+
+            </div>    
+
+            <nav class="nav" id="navMenu">
+                <div class="menu-links">
+                    <a href="akk.html" class="link">Аккаунт</a>
+                    <a href="help.html" class="link">Помощь</a>
                     <a href="feedback.html" class="link">Отзывы</a>
-                    <a href="about.html" class="link" style="white-space: nowrap;">О нас</a>
-                    <a href="help.html" class="link">Поддержка</a>
-                </nav>
-            </div>
+                    <a href="#about" class="link">О нас</a>
+                </div>
+            </nav>   
+            <div class="menu-overlay" id="menuOverlay"></div>
         </div>
     </header>
+
 
     <div class="dashboard-container">
         <aside class="dashboard-sidebar">
@@ -57,6 +81,7 @@
                 </div>
 
 
+                <!-- Блок управления аватаром и данными -->
                 <div class="profile-grid">
                     <div class="card avatar-card">
                         <h3 style="white-space: nowrap;">Аватар пользователя</h3>
@@ -89,7 +114,7 @@
                 </div>
             </section>
 
-
+            <!-- ВКЛАДКА: ПРОДАЖИ -->
             <section id="tab-sales" class="tab-content">
                 <div class="card full-card">
                     <h3>15.05.2026</h3>
@@ -116,10 +141,10 @@
                 </div>
             </section>
 
-
+            <!-- ВКЛАДКА: ПОКУПКИ -->
             <section id="tab-purchases" class="tab-content">
                 
-
+                <!-- Блок за 28.05.2026 -->
                 <div class="card full-card" style="margin-bottom: 25px;">
                     <h3>28.05.2026</h3>
                     <div class="table-wrapper">
@@ -152,6 +177,7 @@
                     </div>
                 </div>
 
+                <!-- Блок за 25.05.2026 -->
                 <div class="card full-card">
                     <h3>25.05.2026</h3>
                     <div class="table-wrapper">
@@ -186,7 +212,8 @@
 
             </section>
 
-               <section id="tab-balance" class="tab-content">
+            <!-- ВКЛАДКА: БАЛАНС -->
+            <section id="tab-balance" class="tab-content">
                 <div class="card full-card">
                     <h3>Финансы</h3>
                     <div class="balance-widget">
