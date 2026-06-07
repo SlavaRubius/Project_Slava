@@ -8,15 +8,48 @@
 </head>
 <body>
 
-  <aside class="sidebar-left">
-    <a href="index.html" class="logo">VIPER<span>PAY</span></a>
-    <nav class="nav">
-      <a href="catalog.html" class="link">Игры</a>
-      <a href="feedback.html" class="link">Отзывы</a>
-      <a href="help.html" class="link">Поддержка</a>
-      <a href="#about" class="link">О нас</a>
-    </nav>
-  </aside>
+ <header class="header">
+        <div class="wrap">
+            <!-- Логотип (чистый текст) -->
+            <a href="index.html" class="logo">VIPER<span>PAY</span></a>
+            
+            <!-- Правая сторона: Чаты // Бургер // Профиль -->
+            <div class="header-right">
+                
+                <!-- Обычная текстовая ссылка на чаты -->
+                <a href="chats.html" class="header-chats">Чаты</a>
+
+                <!-- Кнопка бургера -->
+                <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Ссылка на профиль (аккаунт) -->
+                <a href="akk.html" class="header-avatar-link">
+                    <div class="avatar-holder">
+                        <div class="user-avatar-circle"></div>
+                        <span class="avatar-label">Профиль</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <nav class="nav" id="navMenu">
+                <div class="menu-links">
+                    <a href="akk.html" class="link">Аккаунт</a>
+                    <a href="catalog.html"></a>
+                    <a href="help.html" class="link">Помощь</a>
+                    <a href="feedback.html" class="link">Отзывы</a>
+                    <a href="#about" class="link">О нас</a>
+                </div>
+            </nav>
+            
+            <div class="menu-overlay" id="menuOverlay"></div>
+        </div>
+  </header>
+
 
   <div class="main-wrapper">
     <main class="feedback-container">
@@ -141,33 +174,35 @@
     </main>
 
     <footer class="footer">
-      <div class="wrap">
-        <div class="info">
-          <a href="index.html" class="logo">VIPER<span>PAY</span></a>
-          <p class="copy">© 2026 ViperPay.</p>
-        </div>
-        
-        <div class="pages">
-          <a href="index.html">Главная</a>
-          <a href="catalog.html">Каталог</a>
-          <a href="feedback.html">Отзывы</a>
-          <a href="akk.html">Кабинет</a>
-          <a href="help.html">Помощь</a>
-        </div>
+        <div class="wrap">
+            <div class="info">
+                <a href="index.html" class="logo">VIPER<span>PAY</span></a>
+                <p class="copy">© 2026 ViperPay.</p>
+            </div>
+            
+            <div class="pages">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="feedback.html">Отзывы</a>
+                <a href="akk.html">Кабинет</a>
+                <a href="help.html">Помощь</a>
+            </div>
 
-        <div class="social">
-          <h4>Мы в соцсетях</h4>
-          <div class="icons">
-            <a href="#">VK</a>
-            <a href="#">Telegram</a>
-            <a href="#">Discord</a>
-          </div>
-          <a href="#" class="policy">Политика безопасности</a>
+            <div class="social">
+                <h4>Мы в соцсетях</h4>
+                <div class="icons">
+                    <a href="#">VK</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">Discord</a>
+                </div>
+                <a href="#" class="policy">Политика безопасности</a>
+            </div>
         </div>
-      </div>
-    </footer>     
+    </footer>
   </div>
 
+  <script src="feedback.js"></script>
+  
 </body>
 </html>
 
