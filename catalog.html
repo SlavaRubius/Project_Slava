@@ -11,15 +11,30 @@
 
     <header class="header">
         <div class="wrap">
-            <div class="left">
-                <a href="index.html" class="logo">VIPER<span>PAY</span></a>
-                <nav class="nav">
-                    <a href="#" class="link">Игры</a>
+            <a href="index.html" class="logo">VIPER<span>PAY</span></a>
+            <div class="header-right">
+                <a href="chats.html" class="header-chats">Чаты</a>
+                <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="akk.html" class="header-avatar-link">
+                    <div class="avatar-holder">
+                        <div class="user-avatar-circle"></div>
+                        <span class="avatar-label">Профиль</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav" id="navMenu">
+                <div class="menu-links">
+                    <a href="akk.html" class="link">Аккаунт</a>
+                    <a href="help.html" class="link">Помощь</a>
                     <a href="feedback.html" class="link">Отзывы</a>
                     <a href="#about" class="link">О нас</a>
-                    <a href="help.html" class="link">Поддержка</a>
-                </nav>
-            </div>
+                </div>
+            </nav>
+            <div class="menu-overlay" id="menuOverlay"></div>
         </div>
     </header>
 
@@ -42,26 +57,26 @@
                 
                 <div class="catalog">     
                     <div class="card">
-                        <img class="img" src="https://wikimedia.org" alt="WoW">
+                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyra3NWd5o7kRQ68ymGsd8VVHrvNri33fGlQ&s" alt="WoW">
                         <h3>World of Warcraft</h3>
                         <a href="#" class="btn-card">Открыть</a>
                     </div>
 
                     <div class="card">
-                        <img class="img" src="https://wikimedia.org" alt="Dota 2">
+                        <img class="img" src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/6645195/dota-2-logo.0.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Dota 2">
                         <h3>Dota 2</h3>
                         <a href="#" class="btn-card">Открыть</a>
                     </div>
 
                     <div class="card">
-                        <img class="img" src="https://wikimedia.org" alt="CS 2">
+                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpTNKAXxM_OHU16HKzJy2vbYda-Xn38j6X2A&s" alt="CS 2">
                         <h3>Counter-Strike 2</h3>
                         <a href="#" class="btn-card">Открыть</a>
                     </div>
 
                     <div class="card">
-                        <img class="img" src="https://wikimedia.org" alt="GTA V">
-                        <h3>GTA V / Arizona RP</h3>
+                        <img class="img" src="https://avatars.mds.yandex.net/i?id=c337c7cfa6cfa3db314533f1ee2afabd1ec9b082-5598196-images-thumbs&n=13" alt="Arizona">
+                        <h3>Arizona RP</h3>
                         <a href="#" class="btn-card">Открыть</a>
                     </div>
                 </div>
@@ -75,7 +90,7 @@
                 <div class="offers-grid">
                     <div class="offer-card">
                         <div class="img-wrapper">
-                            <img class="offer-img" src="https://wikimedia.org" alt="WoW Gold">
+                            <img class="offer-img" src="https://i.imgur.com/4XI1CBL.jpg" alt="WoW Gold">
                         </div>
                         <div class="offer-info">
                             <span class="offer-game">World of Warcraft</span>
@@ -87,7 +102,7 @@
 
                     <div class="offer-card">
                         <div class="img-wrapper">
-                            <img class="offer-img" src="https://wikimedia.org" alt="Dota 2 Items">
+                            <img class="offer-img" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR4GuFYyOnYthx_NjFyQNTn8IvI9jFRk0d4g4GNJ5qj9vO0mBGy" alt="Dota 2 Items">
                         </div>
                         <div class="offer-info">
                             <span class="offer-game">Dota 2</span>
@@ -99,24 +114,123 @@
 
                     <div class="offer-card">
                         <div class="img-wrapper">
-                            <img class="offer-img" src="https://wikimedia.org" alt="GTA Virt">
+                            <img class="offer-img" src="https://avatars.mds.yandex.net/i?id=c337c7cfa6cfa3db314533f1ee2afabd1ec9b082-5598196-images-thumbs&n=13" alt="arizona">
                         </div>
                         <div class="offer-info">
                             <span class="offer-game">Arizona RP</span>
-                            <span class="offer-type">Игровая валюта</span>
-                            <span class="offer-price">45 ₽ / млн</span>
+                            <span class="offer-type">Вирты</span>
+                            <span class="offer-price">0,45 ₽ / млн</span>
                         </div>
                         <a href="#" class="btn-card">Купить</a>
                     </div>
 
                     <div class="offer-card">
                         <div class="img-wrapper">
-                            <img class="offer-img" src="https://wikimedia.org" alt="Valorant Points">
+                            <img class="offer-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMwLCD19beBTWMsffM8nmXkH_WISt5vN30uw&s" alt="Valorant">
                         </div>
                         <div class="offer-info">
                             <span class="offer-game">Valorant</span>
-                            <span class="offer-type">Донат (VP)</span>
-                            <span class="offer-price">850 ₽</span>
+                            <span class="offer-type">Points</span>
+                            <span class="offer-price" style="text-indent: 5px !important">850 ₽ <br>(1000 шт.)</span>
+                        </div>
+                        <a href="#" class="btn-card">Купить</a>
+                    </div>
+                        
+                    <div class="offer-card">
+                        <div class="img-wrapper">
+                            <img class="offer-img" src="https://img.gazeta.ru/files3/940/21916940/64-pic_32ratio_900x600-900x600-16096.jpg" alt="telegram-NFT">
+                        </div>
+                        <div class="offer-info">
+                            <span class="offer-game">Telegram</span>
+                            <span class="offer-type">Подарки [NFT]</span>
+                            <span class="offer-price" style="text-indent: 5px !important"> от 550 ₽ <br>(60 шт.)</span>
+                        </div>
+                        <a href="#" class="btn-card">Купить</a>
+                    </div>
+                         
+                    <div class="offer-card">
+                        <div class="img-wrapper">
+                            <img class="offer-img" src="https://yt3.googleusercontent.com/sPF8iZC7s_SxspxKmgybCJDR_MkOAIc5MBKP-sTbYBf7Xgbx5wj9FCb1ANX0r8YoA2SaSBE0Bw=s900-c-k-c0x00ffffff-no-rj" alt="Funtime">
+                        </div>
+                        <div class="offer-info">
+                            <span class="offer-game">Minecraft</span>
+                            <span class="offer-type">Валюта</span>
+                            <span class="offer-price" style="text-indent: 5px !important">210 ₽ <br>(100 млн)</span>
+                            <span>Анархия 1.16.5</span>
+                        </div>
+                        <a href="#" class="btn-card">Купить</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="img-wrapper">
+                            <img class="offer-img" style="border-radius: 0% !important" src="https://i.playerok.com/4hN8lQOURWUc7tt0v3V235zBttQVU9AZg1ByPNadHaw/wm:0.8:soea:5:2:0.2/rs:fill:0:300:1/g:no/quality:99/czM6Ly9wbGF5ZXJvay8vaW1hZ2VzLzFmMTU4YzVjLTFmODEtNmE2MC1jYTRlLWYzMTgyNjQ2MDI0OS5wbmc.jpg" alt="Drag Racing">
+                        </div>
+                        <div class="offer-info">
+                            <span class="offer-game">Drag Racing</span>
+                            <span class="offer-type">Аккаунты</span>
+                            <span class="offer-price" style="text-indent: 5px !important">1240 ₽</span>
+                        </div>
+                        <a href="#" class="btn-card">Купить</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="img-wrapper">
+                            <img class="offer-img" src="https://i.ytimg.com/vi/kvvCYQ6_jTI/hqdefault.jpg" alt="Brawl Stars">
+                        </div>
+                        <div class="offer-info">
+                            <span class="offer-game">Brawl Stars</span>
+                            <span class="offer-type">Brawl pass</span>
+                            <span class="offer-price" style="text-indent: 5px !important"> 800 ₽</span>
+                        </div>
+                        <a href="#" class="btn-card">Купить</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="img-wrapper">
+                            <img class="offer-img" src="https://korobok.store/upload/iblock/e4c/vgq3x72v9l3593amq7tu1ug9vcjeg3wk.jpg" alt="Roblox">
+                        </div>
+                        <div class="offer-info">
+                            <span class="offer-game">Roblox</span>
+                            <span class="offer-type">Робуксы</span>
+                            <span class="offer-price" style="text-indent: 5px !important">6499 ₽</span>
+                        </div>
+                        <a href="#" class="btn-card">Купить</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="img-wrapper">
+                            <img class="offer-img" src="https://wiki.provgis.ru/images/8/81/Province.jpg" alt="Province RP">
+                        </div>
+                        <div class="offer-info">
+                            <span class="offer-game">Province RP</span>
+                            <span class="offer-type">Вирты</span>
+                            <span class="offer-price" style="text-indent: 5px !important">1500 ₽ <br>(3.OOO.OOO)</span>
+                        </div>
+                        <a href="#" class="btn-card">Купить</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="img-wrapper">
+                            <img class="offer-img" src="https://i.playerok.com/Twu5h4At5aZ6XMO8FQYC1p5dkm8zc2abfREAhSxS6R0/rs:fill:0:2000:0/g:no/quality:99/czM6Ly9wbGF5ZXJvay8vaW1hZ2VzLzFlZDY1MWMwLTZkZWYtNmM4MC1mYTAxLThjNWIwOGM2YjA4Ny5qcGc.jpg" alt="Forza Horizon">
+                        </div>
+                        <div class="offer-info">
+                            <span class="offer-game">Forza Horizon</span>
+                            <span class="offer-type">Ключи</span>
+                            <span class="offer-price" style="text-indent: 10px !important">1749 ₽</span>
+                            <span> Ключ Steam от Forza Horizon 5</span>
+                        </div>
+                        <a href="#" class="btn-card">Купить</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="img-wrapper">
+                            <img class="offer-img" src="https://cdn.payga.me/offers/30679/32774/2071712705f941eb92da118274351498_7C45098B-2C90-4B38-B96F-163429542576.preview.jpeg" alt="SO-2">
+                        </div>
+                        <div class="offer-info">
+                            <span class="offer-game">Standoff 2</span>
+                            <span class="offer-type">Голда</span>
+                            <span class="offer-price" style="text-indent: 5px !important">199 ₽</span>
+                            <span>Быстрое зачисление по ID</span>
                         </div>
                         <a href="#" class="btn-card">Купить</a>
                     </div>
@@ -124,6 +238,33 @@
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="info">
+                <a href="index.html" class="logo">VIPER<span>PAY</span></a>
+                <p class="copy">© 2026 ViperPay.</p>
+            </div>
+            <div class="pages">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="feedback.html">Отзывы</a>
+                <a href="akk.html">Кабинет</a>
+                <a href="help.html">Помощь</a>
+            </div>
+            <div class="social">
+                <h4>Мы в соцсетях</h4>
+                <div class="icons">
+                    <a href="#">VK</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">Discord</a>
+                </div>
+                <a href="#" class="policy">Политика безопасности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="catalog.js"></script>
 
 </body>
 </html>
